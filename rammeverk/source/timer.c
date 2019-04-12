@@ -9,7 +9,7 @@
 ////      VARIABLES       ////
 //////////////////////////////
 
-const double SECONDS = 3;
+const double SECONDS = 0.05;
 static clock_t clock_var; //Variable that will be used for storing clock ticks since program start.
 
 

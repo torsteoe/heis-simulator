@@ -1,0 +1,76 @@
+\hypertarget{_f_s_m_8h}{}\section{source/\+F\+SM.h File Reference}
+\label{_f_s_m_8h}\index{source/\+F\+S\+M.\+h@{source/\+F\+S\+M.\+h}}
+
+
+A library for managing the state machine.  
+
+
+{\ttfamily \#include \char`\"{}elev.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}timer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}doors.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_f_s_m_8h_a4bc68d2016b4febdd4e10280d44fc00a}{F\+S\+M\+\_\+init} ()
+\item 
+void \hyperlink{_f_s_m_8h_a3f2acdae5e4fe54a200c56936c6d66e2}{F\+S\+M\+\_\+change\+State} ()
+\item 
+int \hyperlink{_f_s_m_8h_a498b506458b868cb8b9c7df817da7f05}{F\+S\+M\+\_\+get\+\_\+state} ()
+\item 
+\mbox{\Hypertarget{_f_s_m_8h_ae53b10e4d18dd1b04aeeaf7c562b7a93}\label{_f_s_m_8h_ae53b10e4d18dd1b04aeeaf7c562b7a93}} 
+int {\bfseries ordered\+\_\+to\+\_\+same\+\_\+floor} ()
+\item 
+\mbox{\Hypertarget{_f_s_m_8h_af12a6de652f7a5dbd45e47cac43657fd}\label{_f_s_m_8h_af12a6de652f7a5dbd45e47cac43657fd}} 
+int {\bfseries ordered\+\_\+up} ()
+\item 
+\mbox{\Hypertarget{_f_s_m_8h_a20e96fcf990b0a8aef96ccecef91a92f}\label{_f_s_m_8h_a20e96fcf990b0a8aef96ccecef91a92f}} 
+int {\bfseries ordered\+\_\+down} ()
+\item 
+\mbox{\Hypertarget{_f_s_m_8h_aac9b9f7ad6290ec0fb5a75391ed72b97}\label{_f_s_m_8h_aac9b9f7ad6290ec0fb5a75391ed72b97}} 
+int {\bfseries on\+\_\+floor} ()
+\item 
+\mbox{\Hypertarget{_f_s_m_8h_a4617538fdc814bc0e7a179ef0cbe4639}\label{_f_s_m_8h_a4617538fdc814bc0e7a179ef0cbe4639}} 
+int {\bfseries orders\+\_\+exist} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A library for managing the state machine. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_f_s_m_8h_a3f2acdae5e4fe54a200c56936c6d66e2}\label{_f_s_m_8h_a3f2acdae5e4fe54a200c56936c6d66e2}} 
+\index{F\+S\+M.\+h@{F\+S\+M.\+h}!F\+S\+M\+\_\+change\+State@{F\+S\+M\+\_\+change\+State}}
+\index{F\+S\+M\+\_\+change\+State@{F\+S\+M\+\_\+change\+State}!F\+S\+M.\+h@{F\+S\+M.\+h}}
+\subsubsection{\texorpdfstring{F\+S\+M\+\_\+change\+State()}{FSM\_changeState()}}
+{\footnotesize\ttfamily void F\+S\+M\+\_\+change\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Perform action based on what state one is in. Change state if required. 
+
+Definition at line 41 of file F\+S\+M.\+c.
+
+\mbox{\Hypertarget{_f_s_m_8h_a498b506458b868cb8b9c7df817da7f05}\label{_f_s_m_8h_a498b506458b868cb8b9c7df817da7f05}} 
+\index{F\+S\+M.\+h@{F\+S\+M.\+h}!F\+S\+M\+\_\+get\+\_\+state@{F\+S\+M\+\_\+get\+\_\+state}}
+\index{F\+S\+M\+\_\+get\+\_\+state@{F\+S\+M\+\_\+get\+\_\+state}!F\+S\+M.\+h@{F\+S\+M.\+h}}
+\subsubsection{\texorpdfstring{F\+S\+M\+\_\+get\+\_\+state()}{FSM\_get\_state()}}
+{\footnotesize\ttfamily int F\+S\+M\+\_\+get\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initialize elevator. \begin{DoxyReturn}{Returns}
+{\ttfamily int} ranging from {\ttfamily 0} to {\ttfamily 4} based on state. 
+\end{DoxyReturn}
+
+
+Definition at line 36 of file F\+S\+M.\+c.
+
+\mbox{\Hypertarget{_f_s_m_8h_a4bc68d2016b4febdd4e10280d44fc00a}\label{_f_s_m_8h_a4bc68d2016b4febdd4e10280d44fc00a}} 
+\index{F\+S\+M.\+h@{F\+S\+M.\+h}!F\+S\+M\+\_\+init@{F\+S\+M\+\_\+init}}
+\index{F\+S\+M\+\_\+init@{F\+S\+M\+\_\+init}!F\+S\+M.\+h@{F\+S\+M.\+h}}
+\subsubsection{\texorpdfstring{F\+S\+M\+\_\+init()}{FSM\_init()}}
+{\footnotesize\ttfamily void F\+S\+M\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initialize elevator. 
+
+Definition at line 20 of file F\+S\+M.\+c.
+

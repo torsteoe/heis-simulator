@@ -1,0 +1,153 @@
+\hypertarget{queue_8c}{}\section{source/queue.c File Reference}
+\label{queue_8c}\index{source/queue.\+c@{source/queue.\+c}}
+
+
+Implementation file for the queue module.  
+
+
+{\ttfamily \#include \char`\"{}queue.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{queue_8c_afdb08b95d302f48890b5d5a60e2ed1b4}\label{queue_8c_afdb08b95d302f48890b5d5a60e2ed1b4}} 
+void {\bfseries queue\+\_\+set\+\_\+previous\+\_\+floor} (int current\+\_\+floor)
+\item 
+int \hyperlink{queue_8c_adfb872c17097206a7f0ed3ed22aaad28}{queue\+\_\+get\+\_\+previous\+\_\+floor} ()
+\item 
+int $\ast$ \hyperlink{queue_8c_a3b1a7d42d26a3a3733894a0f19ff8028}{queue\+\_\+get\+\_\+up\+\_\+orders} ()
+\item 
+int $\ast$ \hyperlink{queue_8c_a88aabb208ab330deebcee5891d1a6d3c}{queue\+\_\+get\+\_\+down\+\_\+orders} ()
+\item 
+int $\ast$ \hyperlink{queue_8c_a575921a16ca9e63e7a306faebc2233f4}{queue\+\_\+get\+\_\+panel\+\_\+orders} ()
+\item 
+int \hyperlink{queue_8c_a62f3ee497cfec496d15e0e210dd1ee78}{queue\+\_\+get\+\_\+priority\+\_\+order} ()
+\item 
+int \hyperlink{queue_8c_aabdac24759b543e67fe5cf6938e84d9f}{queue\+\_\+should\+\_\+\+I\+\_\+stop\+\_\+at\+\_\+floor} (int direction)
+\item 
+\mbox{\Hypertarget{queue_8c_ad11c327ee856d320e7e4741a777505d2}\label{queue_8c_ad11c327ee856d320e7e4741a777505d2}} 
+void {\bfseries queue\+\_\+delete\+\_\+floor\+\_\+orders} ()
+\item 
+\mbox{\Hypertarget{queue_8c_a0c362b06a1ece79df2a6617b367fca8f}\label{queue_8c_a0c362b06a1ece79df2a6617b367fca8f}} 
+int {\bfseries queue\+\_\+orders\+\_\+in\+\_\+direction} (int direction)
+\item 
+\mbox{\Hypertarget{queue_8c_a738c57c092eaae0b4e2e663d8cce93d5}\label{queue_8c_a738c57c092eaae0b4e2e663d8cce93d5}} 
+void {\bfseries queue\+\_\+init} ()
+\item 
+\mbox{\Hypertarget{queue_8c_a9c8ee999898cb642da2cc838de1f2301}\label{queue_8c_a9c8ee999898cb642da2cc838de1f2301}} 
+void {\bfseries queue\+\_\+update\+\_\+orders} ()
+\item 
+\mbox{\Hypertarget{queue_8c_a5c2de1b2fea24dd4d8b1c680643d12fc}\label{queue_8c_a5c2de1b2fea24dd4d8b1c680643d12fc}} 
+void {\bfseries add\+\_\+up\+\_\+orders} ()
+\item 
+\mbox{\Hypertarget{queue_8c_a97e784779e21c8189e713631d406c989}\label{queue_8c_a97e784779e21c8189e713631d406c989}} 
+void {\bfseries add\+\_\+down\+\_\+orders} ()
+\item 
+\mbox{\Hypertarget{queue_8c_aa8b0496c9a85b96329de85c3859212db}\label{queue_8c_aa8b0496c9a85b96329de85c3859212db}} 
+void {\bfseries add\+\_\+panel\+\_\+orders} ()
+\item 
+\mbox{\Hypertarget{queue_8c_a08c8dd5727a38b0e0a4c85b37be2e61d}\label{queue_8c_a08c8dd5727a38b0e0a4c85b37be2e61d}} 
+void {\bfseries add\+\_\+priority\+\_\+orders} (int floor)
+\item 
+\mbox{\Hypertarget{queue_8c_afb92094b2527c54ce0c94d9fea708691}\label{queue_8c_afb92094b2527c54ce0c94d9fea708691}} 
+void {\bfseries queue\+\_\+reset\+\_\+orders} ()
+\item 
+\mbox{\Hypertarget{queue_8c_ab509c47eb8f2833868d725bfc3f08c6e}\label{queue_8c_ab509c47eb8f2833868d725bfc3f08c6e}} 
+void {\bfseries queue\+\_\+print\+\_\+orders} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{queue_8c_a8b39957d8636cc75a159ab478ec0bcc5}\label{queue_8c_a8b39957d8636cc75a159ab478ec0bcc5}} 
+const int {\bfseries O\+R\+D\+E\+R\+\_\+\+S\+I\+ZE} = 4
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation file for the queue module. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{queue_8c_a88aabb208ab330deebcee5891d1a6d3c}\label{queue_8c_a88aabb208ab330deebcee5891d1a6d3c}} 
+\index{queue.\+c@{queue.\+c}!queue\+\_\+get\+\_\+down\+\_\+orders@{queue\+\_\+get\+\_\+down\+\_\+orders}}
+\index{queue\+\_\+get\+\_\+down\+\_\+orders@{queue\+\_\+get\+\_\+down\+\_\+orders}!queue.\+c@{queue.\+c}}
+\subsubsection{\texorpdfstring{queue\+\_\+get\+\_\+down\+\_\+orders()}{queue\_get\_down\_orders()}}
+{\footnotesize\ttfamily int$\ast$ queue\+\_\+get\+\_\+down\+\_\+orders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fetches array of down-\/orders. \begin{DoxyReturn}{Returns}
+array where each floor is represented by a 0 or 1, depending on, respectively, if there is an order or not. 
+\end{DoxyReturn}
+
+
+Definition at line 32 of file queue.\+c.
+
+\mbox{\Hypertarget{queue_8c_a575921a16ca9e63e7a306faebc2233f4}\label{queue_8c_a575921a16ca9e63e7a306faebc2233f4}} 
+\index{queue.\+c@{queue.\+c}!queue\+\_\+get\+\_\+panel\+\_\+orders@{queue\+\_\+get\+\_\+panel\+\_\+orders}}
+\index{queue\+\_\+get\+\_\+panel\+\_\+orders@{queue\+\_\+get\+\_\+panel\+\_\+orders}!queue.\+c@{queue.\+c}}
+\subsubsection{\texorpdfstring{queue\+\_\+get\+\_\+panel\+\_\+orders()}{queue\_get\_panel\_orders()}}
+{\footnotesize\ttfamily int$\ast$ queue\+\_\+get\+\_\+panel\+\_\+orders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fetches array of panel-\/orders (orders inside elevator). \begin{DoxyReturn}{Returns}
+array where each floor is represented by a 0 or 1, depending on, respectively, if there is an order or not. 
+\end{DoxyReturn}
+
+
+Definition at line 36 of file queue.\+c.
+
+\mbox{\Hypertarget{queue_8c_adfb872c17097206a7f0ed3ed22aaad28}\label{queue_8c_adfb872c17097206a7f0ed3ed22aaad28}} 
+\index{queue.\+c@{queue.\+c}!queue\+\_\+get\+\_\+previous\+\_\+floor@{queue\+\_\+get\+\_\+previous\+\_\+floor}}
+\index{queue\+\_\+get\+\_\+previous\+\_\+floor@{queue\+\_\+get\+\_\+previous\+\_\+floor}!queue.\+c@{queue.\+c}}
+\subsubsection{\texorpdfstring{queue\+\_\+get\+\_\+previous\+\_\+floor()}{queue\_get\_previous\_floor()}}
+{\footnotesize\ttfamily int queue\+\_\+get\+\_\+previous\+\_\+floor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fetches previous floor. \begin{DoxyReturn}{Returns}
+floor ranging from {\ttfamily 0} to {\ttfamily 3}. 
+\end{DoxyReturn}
+
+
+Definition at line 25 of file queue.\+c.
+
+\mbox{\Hypertarget{queue_8c_a62f3ee497cfec496d15e0e210dd1ee78}\label{queue_8c_a62f3ee497cfec496d15e0e210dd1ee78}} 
+\index{queue.\+c@{queue.\+c}!queue\+\_\+get\+\_\+priority\+\_\+order@{queue\+\_\+get\+\_\+priority\+\_\+order}}
+\index{queue\+\_\+get\+\_\+priority\+\_\+order@{queue\+\_\+get\+\_\+priority\+\_\+order}!queue.\+c@{queue.\+c}}
+\subsubsection{\texorpdfstring{queue\+\_\+get\+\_\+priority\+\_\+order()}{queue\_get\_priority\_order()}}
+{\footnotesize\ttfamily int queue\+\_\+get\+\_\+priority\+\_\+order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fetches priority order, first floor that was ordered that has still not been visited since order. \begin{DoxyReturn}{Returns}
+floor ranging from {\ttfamily 0} to {\ttfamily 3}. 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file queue.\+c.
+
+\mbox{\Hypertarget{queue_8c_a3b1a7d42d26a3a3733894a0f19ff8028}\label{queue_8c_a3b1a7d42d26a3a3733894a0f19ff8028}} 
+\index{queue.\+c@{queue.\+c}!queue\+\_\+get\+\_\+up\+\_\+orders@{queue\+\_\+get\+\_\+up\+\_\+orders}}
+\index{queue\+\_\+get\+\_\+up\+\_\+orders@{queue\+\_\+get\+\_\+up\+\_\+orders}!queue.\+c@{queue.\+c}}
+\subsubsection{\texorpdfstring{queue\+\_\+get\+\_\+up\+\_\+orders()}{queue\_get\_up\_orders()}}
+{\footnotesize\ttfamily int$\ast$ queue\+\_\+get\+\_\+up\+\_\+orders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fetches array of up-\/orders. \begin{DoxyReturn}{Returns}
+array where each floor is represented by a 0 or 1, depending on, respectively, if there is an order or not. 
+\end{DoxyReturn}
+
+
+Definition at line 29 of file queue.\+c.
+
+\mbox{\Hypertarget{queue_8c_aabdac24759b543e67fe5cf6938e84d9f}\label{queue_8c_aabdac24759b543e67fe5cf6938e84d9f}} 
+\index{queue.\+c@{queue.\+c}!queue\+\_\+should\+\_\+\+I\+\_\+stop\+\_\+at\+\_\+floor@{queue\+\_\+should\+\_\+\+I\+\_\+stop\+\_\+at\+\_\+floor}}
+\index{queue\+\_\+should\+\_\+\+I\+\_\+stop\+\_\+at\+\_\+floor@{queue\+\_\+should\+\_\+\+I\+\_\+stop\+\_\+at\+\_\+floor}!queue.\+c@{queue.\+c}}
+\subsubsection{\texorpdfstring{queue\+\_\+should\+\_\+\+I\+\_\+stop\+\_\+at\+\_\+floor()}{queue\_should\_I\_stop\_at\_floor()}}
+{\footnotesize\ttfamily int queue\+\_\+should\+\_\+\+I\+\_\+stop\+\_\+at\+\_\+floor (\begin{DoxyParamCaption}\item[{int}]{direction }\end{DoxyParamCaption})}
+
+Check if elevator should stop at floor. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em direction} & -\/1 for down, 1 for up, 2 to signal check in both directions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily 1} to signal stop, {\ttfamily 0} to signal no stop 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file queue.\+c.
+

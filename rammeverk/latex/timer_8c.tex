@@ -1,0 +1,64 @@
+\hypertarget{timer_8c}{}\section{source/timer.c File Reference}
+\label{timer_8c}\index{source/timer.\+c@{source/timer.\+c}}
+
+
+Implementation file for the timer module.  
+
+
+{\ttfamily \#include \char`\"{}timer.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{timer_8c_a896a4c37c6ecf8868ef0dc758e5a598c}{timer\+\_\+init} ()
+\item 
+void \hyperlink{timer_8c_a7f1ca02cbf81adb4494ece96457c6c5f}{timer\+\_\+reset} ()
+\item 
+int \hyperlink{timer_8c_a486840e6a1271cb048aef30ae1715967}{timer\+\_\+is\+\_\+timeout} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{timer_8c_a47a9a559e0e2b9630e307397ce1f8341}\label{timer_8c_a47a9a559e0e2b9630e307397ce1f8341}} 
+const double {\bfseries S\+E\+C\+O\+N\+DS} = 3
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation file for the timer module. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{timer_8c_a896a4c37c6ecf8868ef0dc758e5a598c}\label{timer_8c_a896a4c37c6ecf8868ef0dc758e5a598c}} 
+\index{timer.\+c@{timer.\+c}!timer\+\_\+init@{timer\+\_\+init}}
+\index{timer\+\_\+init@{timer\+\_\+init}!timer.\+c@{timer.\+c}}
+\subsubsection{\texorpdfstring{timer\+\_\+init()}{timer\_init()}}
+{\footnotesize\ttfamily void timer\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initialize timer\+: reset timer. 
+
+Definition at line 9 of file timer.\+c.
+
+\mbox{\Hypertarget{timer_8c_a486840e6a1271cb048aef30ae1715967}\label{timer_8c_a486840e6a1271cb048aef30ae1715967}} 
+\index{timer.\+c@{timer.\+c}!timer\+\_\+is\+\_\+timeout@{timer\+\_\+is\+\_\+timeout}}
+\index{timer\+\_\+is\+\_\+timeout@{timer\+\_\+is\+\_\+timeout}!timer.\+c@{timer.\+c}}
+\subsubsection{\texorpdfstring{timer\+\_\+is\+\_\+timeout()}{timer\_is\_timeout()}}
+{\footnotesize\ttfamily int timer\+\_\+is\+\_\+timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Check if timer is out. \begin{DoxyReturn}{Returns}
+{\ttfamily 1} if timer is out, {\ttfamily 0} otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 15 of file timer.\+c.
+
+\mbox{\Hypertarget{timer_8c_a7f1ca02cbf81adb4494ece96457c6c5f}\label{timer_8c_a7f1ca02cbf81adb4494ece96457c6c5f}} 
+\index{timer.\+c@{timer.\+c}!timer\+\_\+reset@{timer\+\_\+reset}}
+\index{timer\+\_\+reset@{timer\+\_\+reset}!timer.\+c@{timer.\+c}}
+\subsubsection{\texorpdfstring{timer\+\_\+reset()}{timer\_reset()}}
+{\footnotesize\ttfamily void timer\+\_\+reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reset timer. 
+
+Definition at line 12 of file timer.\+c.
+

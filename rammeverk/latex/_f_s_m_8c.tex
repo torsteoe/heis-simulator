@@ -1,0 +1,98 @@
+\hypertarget{_f_s_m_8c}{}\section{source/\+F\+SM.c File Reference}
+\label{_f_s_m_8c}\index{source/\+F\+S\+M.\+c@{source/\+F\+S\+M.\+c}}
+
+
+Implementation file for the state machine module.  
+
+
+{\ttfamily \#include \char`\"{}F\+S\+M.\+h\char`\"{}}\newline
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_f_s_m_8c_ad02d84dcc950c5ba2775a472376427c7}\label{_f_s_m_8c_ad02d84dcc950c5ba2775a472376427c7}} 
+typedef enum S\+T\+A\+T\+ES {\bfseries state}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_f_s_m_8c_a94b1da2e055fff4d143aa6aa891f79a9}\label{_f_s_m_8c_a94b1da2e055fff4d143aa6aa891f79a9}} 
+enum {\bfseries S\+T\+A\+T\+ES} \{ \newline
+{\bfseries N\+O\+T\+M\+O\+V\+I\+N\+G\+A\+T\+F\+L\+O\+OR}, 
+{\bfseries M\+O\+V\+I\+N\+G\+D\+O\+WN}, 
+{\bfseries M\+O\+V\+I\+N\+G\+UP}, 
+{\bfseries S\+T\+O\+P\+S\+T\+A\+TE}, 
+\newline
+{\bfseries N\+O\+T\+M\+O\+V\+I\+N\+G\+M\+I\+D\+D\+LE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_f_s_m_8c_a4bc68d2016b4febdd4e10280d44fc00a}{F\+S\+M\+\_\+init} ()
+\item 
+int \hyperlink{_f_s_m_8c_a498b506458b868cb8b9c7df817da7f05}{F\+S\+M\+\_\+get\+\_\+state} ()
+\item 
+void \hyperlink{_f_s_m_8c_a3f2acdae5e4fe54a200c56936c6d66e2}{F\+S\+M\+\_\+change\+State} ()
+\item 
+\mbox{\Hypertarget{_f_s_m_8c_ae53b10e4d18dd1b04aeeaf7c562b7a93}\label{_f_s_m_8c_ae53b10e4d18dd1b04aeeaf7c562b7a93}} 
+int {\bfseries ordered\+\_\+to\+\_\+same\+\_\+floor} ()
+\item 
+\mbox{\Hypertarget{_f_s_m_8c_af12a6de652f7a5dbd45e47cac43657fd}\label{_f_s_m_8c_af12a6de652f7a5dbd45e47cac43657fd}} 
+int {\bfseries ordered\+\_\+up} ()
+\item 
+\mbox{\Hypertarget{_f_s_m_8c_a20e96fcf990b0a8aef96ccecef91a92f}\label{_f_s_m_8c_a20e96fcf990b0a8aef96ccecef91a92f}} 
+int {\bfseries ordered\+\_\+down} ()
+\item 
+\mbox{\Hypertarget{_f_s_m_8c_aac9b9f7ad6290ec0fb5a75391ed72b97}\label{_f_s_m_8c_aac9b9f7ad6290ec0fb5a75391ed72b97}} 
+int {\bfseries on\+\_\+floor} ()
+\item 
+\mbox{\Hypertarget{_f_s_m_8c_a4617538fdc814bc0e7a179ef0cbe4639}\label{_f_s_m_8c_a4617538fdc814bc0e7a179ef0cbe4639}} 
+int {\bfseries orders\+\_\+exist} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_f_s_m_8c_a493b57f443cc38b3d3df9c1e584d9d82}\label{_f_s_m_8c_a493b57f443cc38b3d3df9c1e584d9d82}} 
+int {\bfseries timeout}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation file for the state machine module. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_f_s_m_8c_a3f2acdae5e4fe54a200c56936c6d66e2}\label{_f_s_m_8c_a3f2acdae5e4fe54a200c56936c6d66e2}} 
+\index{F\+S\+M.\+c@{F\+S\+M.\+c}!F\+S\+M\+\_\+change\+State@{F\+S\+M\+\_\+change\+State}}
+\index{F\+S\+M\+\_\+change\+State@{F\+S\+M\+\_\+change\+State}!F\+S\+M.\+c@{F\+S\+M.\+c}}
+\subsubsection{\texorpdfstring{F\+S\+M\+\_\+change\+State()}{FSM\_changeState()}}
+{\footnotesize\ttfamily void F\+S\+M\+\_\+change\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Perform action based on what state one is in. Change state if required. 
+
+Definition at line 41 of file F\+S\+M.\+c.
+
+\mbox{\Hypertarget{_f_s_m_8c_a498b506458b868cb8b9c7df817da7f05}\label{_f_s_m_8c_a498b506458b868cb8b9c7df817da7f05}} 
+\index{F\+S\+M.\+c@{F\+S\+M.\+c}!F\+S\+M\+\_\+get\+\_\+state@{F\+S\+M\+\_\+get\+\_\+state}}
+\index{F\+S\+M\+\_\+get\+\_\+state@{F\+S\+M\+\_\+get\+\_\+state}!F\+S\+M.\+c@{F\+S\+M.\+c}}
+\subsubsection{\texorpdfstring{F\+S\+M\+\_\+get\+\_\+state()}{FSM\_get\_state()}}
+{\footnotesize\ttfamily int F\+S\+M\+\_\+get\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initialize elevator. \begin{DoxyReturn}{Returns}
+{\ttfamily int} ranging from {\ttfamily 0} to {\ttfamily 4} based on state. 
+\end{DoxyReturn}
+
+
+Definition at line 36 of file F\+S\+M.\+c.
+
+\mbox{\Hypertarget{_f_s_m_8c_a4bc68d2016b4febdd4e10280d44fc00a}\label{_f_s_m_8c_a4bc68d2016b4febdd4e10280d44fc00a}} 
+\index{F\+S\+M.\+c@{F\+S\+M.\+c}!F\+S\+M\+\_\+init@{F\+S\+M\+\_\+init}}
+\index{F\+S\+M\+\_\+init@{F\+S\+M\+\_\+init}!F\+S\+M.\+c@{F\+S\+M.\+c}}
+\subsubsection{\texorpdfstring{F\+S\+M\+\_\+init()}{FSM\_init()}}
+{\footnotesize\ttfamily void F\+S\+M\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initialize elevator. 
+
+Definition at line 20 of file F\+S\+M.\+c.
+

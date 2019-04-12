@@ -1,0 +1,129 @@
+\hypertarget{io_8c}{}\section{source/io.c File Reference}
+\label{io_8c}\index{source/io.\+c@{source/io.\+c}}
+
+
+Implementation file for the Input/\+Output module interfacing with lib\+Comedi.  
+
+
+{\ttfamily \#include \char`\"{}io.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}channels.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$comedilib.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{io_8c_a12ce98b64f2019ac45b44826a4db7ec9}{io\+\_\+init} ()
+\item 
+void \hyperlink{io_8c_a4d538858b80ee856217e3ecfde8a3c60}{io\+\_\+set\+\_\+bit} (int channel)
+\item 
+void \hyperlink{io_8c_a97951257634a0778b858a4ced7558f81}{io\+\_\+clear\+\_\+bit} (int channel)
+\item 
+void \hyperlink{io_8c_a1c2c5df63111187109ef11be354621bd}{io\+\_\+write\+\_\+analog} (int channel, int value)
+\item 
+int \hyperlink{io_8c_ae9e08ee7d41b07b153e2ddaae4dc53cb}{io\+\_\+read\+\_\+bit} (int channel)
+\item 
+int \hyperlink{io_8c_ab145a5637d2c463dfb5741e1a748dd74}{io\+\_\+read\+\_\+analog} (int channel)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation file for the Input/\+Output module interfacing with lib\+Comedi. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{io_8c_a97951257634a0778b858a4ced7558f81}\label{io_8c_a97951257634a0778b858a4ced7558f81}} 
+\index{io.\+c@{io.\+c}!io\+\_\+clear\+\_\+bit@{io\+\_\+clear\+\_\+bit}}
+\index{io\+\_\+clear\+\_\+bit@{io\+\_\+clear\+\_\+bit}!io.\+c@{io.\+c}}
+\subsubsection{\texorpdfstring{io\+\_\+clear\+\_\+bit()}{io\_clear\_bit()}}
+{\footnotesize\ttfamily void io\+\_\+clear\+\_\+bit (\begin{DoxyParamCaption}\item[{int}]{channel }\end{DoxyParamCaption})}
+
+Clears a digital channel bit. 
+\begin{DoxyParams}{Parameters}
+{\em channel} & Channel bit to set. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 49 of file io.\+c.
+
+\mbox{\Hypertarget{io_8c_a12ce98b64f2019ac45b44826a4db7ec9}\label{io_8c_a12ce98b64f2019ac45b44826a4db7ec9}} 
+\index{io.\+c@{io.\+c}!io\+\_\+init@{io\+\_\+init}}
+\index{io\+\_\+init@{io\+\_\+init}!io.\+c@{io.\+c}}
+\subsubsection{\texorpdfstring{io\+\_\+init()}{io\_init()}}
+{\footnotesize\ttfamily int io\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initialize lib\+Comedi in \char`\"{}\+Sanntidssalen\char`\"{} \begin{DoxyReturn}{Returns}
+Non-\/zero on success and 0 on failure 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file io.\+c.
+
+\mbox{\Hypertarget{io_8c_ab145a5637d2c463dfb5741e1a748dd74}\label{io_8c_ab145a5637d2c463dfb5741e1a748dd74}} 
+\index{io.\+c@{io.\+c}!io\+\_\+read\+\_\+analog@{io\+\_\+read\+\_\+analog}}
+\index{io\+\_\+read\+\_\+analog@{io\+\_\+read\+\_\+analog}!io.\+c@{io.\+c}}
+\subsubsection{\texorpdfstring{io\+\_\+read\+\_\+analog()}{io\_read\_analog()}}
+{\footnotesize\ttfamily int io\+\_\+read\+\_\+analog (\begin{DoxyParamCaption}\item[{int}]{channel }\end{DoxyParamCaption})}
+
+Reads a bit value from an analog channel. 
+\begin{DoxyParams}{Parameters}
+{\em channel} & Channel to read from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value read. 
+\end{DoxyReturn}
+
+
+Definition at line 70 of file io.\+c.
+
+\mbox{\Hypertarget{io_8c_ae9e08ee7d41b07b153e2ddaae4dc53cb}\label{io_8c_ae9e08ee7d41b07b153e2ddaae4dc53cb}} 
+\index{io.\+c@{io.\+c}!io\+\_\+read\+\_\+bit@{io\+\_\+read\+\_\+bit}}
+\index{io\+\_\+read\+\_\+bit@{io\+\_\+read\+\_\+bit}!io.\+c@{io.\+c}}
+\subsubsection{\texorpdfstring{io\+\_\+read\+\_\+bit()}{io\_read\_bit()}}
+{\footnotesize\ttfamily int io\+\_\+read\+\_\+bit (\begin{DoxyParamCaption}\item[{int}]{channel }\end{DoxyParamCaption})}
+
+Reads a bit value from a digital channel. 
+\begin{DoxyParams}{Parameters}
+{\em channel} & Channel to read from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value read. 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file io.\+c.
+
+\mbox{\Hypertarget{io_8c_a4d538858b80ee856217e3ecfde8a3c60}\label{io_8c_a4d538858b80ee856217e3ecfde8a3c60}} 
+\index{io.\+c@{io.\+c}!io\+\_\+set\+\_\+bit@{io\+\_\+set\+\_\+bit}}
+\index{io\+\_\+set\+\_\+bit@{io\+\_\+set\+\_\+bit}!io.\+c@{io.\+c}}
+\subsubsection{\texorpdfstring{io\+\_\+set\+\_\+bit()}{io\_set\_bit()}}
+{\footnotesize\ttfamily void io\+\_\+set\+\_\+bit (\begin{DoxyParamCaption}\item[{int}]{channel }\end{DoxyParamCaption})}
+
+Sets a digital channel bit. 
+\begin{DoxyParams}{Parameters}
+{\em channel} & Channel bit to set. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 43 of file io.\+c.
+
+\mbox{\Hypertarget{io_8c_a1c2c5df63111187109ef11be354621bd}\label{io_8c_a1c2c5df63111187109ef11be354621bd}} 
+\index{io.\+c@{io.\+c}!io\+\_\+write\+\_\+analog@{io\+\_\+write\+\_\+analog}}
+\index{io\+\_\+write\+\_\+analog@{io\+\_\+write\+\_\+analog}!io.\+c@{io.\+c}}
+\subsubsection{\texorpdfstring{io\+\_\+write\+\_\+analog()}{io\_write\_analog()}}
+{\footnotesize\ttfamily void io\+\_\+write\+\_\+analog (\begin{DoxyParamCaption}\item[{int}]{channel,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+Writes a value to an analog channel. 
+\begin{DoxyParams}{Parameters}
+{\em channel} & Channel to write to. \\
+\hline
+{\em value} & Value to write. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 55 of file io.\+c.
+
